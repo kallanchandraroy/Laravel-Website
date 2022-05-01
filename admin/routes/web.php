@@ -32,7 +32,7 @@ Route::get('/getServicesData', [ServiceController::class, 'getServiceData']);
 Route::post('/ServiceDelete', [ServiceController::class, 'ServiceDelete']);
 Route::post('/ServiceDetails', [ServiceController::class, 'getServiceDetails']);
 Route::post('/ServiceUpdate', [ServiceController::class, 'ServiceUpdate']);
-// Route::post('/ServiceAdd', [ServiceController::class, 'ServiceAdd']);
+Route::post('/ServiceAdd', [ServiceController::class, 'ServiceAdd']);
 
 
 
