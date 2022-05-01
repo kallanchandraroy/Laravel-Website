@@ -19,3 +19,5 @@ use App\Http\Controllers\HomeController;
 //});
 
 Route::get('/', [HomeController::class, 'HomeIndex']);
+
+Route::get('/Courses', 'CoursesController@CoursePage');

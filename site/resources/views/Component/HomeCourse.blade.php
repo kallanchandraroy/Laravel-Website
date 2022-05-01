@@ -10,6 +10,7 @@
             <div class="thumbnail-middle">
                 <h1 class="thumbnail-title"> {{ $CoursesData->course_name}} </h1>
                 <h1 class="thumbnail-subtitle">{{ $CoursesData->course_des}}</h1>
+                <h1 class="thumbnail-subtitle">{{ $CoursesData->course_fee}}</h1>
                 <h1 class="thumbnail-subtitle">{{ $CoursesData->course_totalclass}} </h1>
                 <a target="_blank" href="{{$CoursesData->course_link}}" class="normal-btn btn">শুরু করুন</a>
             </div>
@@ -21,3 +22,4 @@
 
     </div>
 </div>
+
