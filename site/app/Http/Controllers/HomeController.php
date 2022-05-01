@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\VisitorModel;
 use App\Models\ServicesModel;
 use App\Models\CourseModel;
+use App\Models\ProjectsModel;
+use App\Models\ContactModel;
+use App\Models\ReviewModel;
 
 class HomeController extends Controller
 {
@@ -17,10 +20,37 @@ class HomeController extends Controller
 
         $ServicesData= json_decode( ServicesModel::all());
         $CoursesData= json_decode( CourseModel::orderBy('id','desc')->limit(6)->get());
+        $ProjectData=json_decode(ProjectsModel::orderBy('id','desc')->limit(10)->get());
+        $ReviewData= json_decode( ReviewModel::all());
 
         return view('Home',[
             'ServicesData'=>$ServicesData,
-            'CoursesData'=>$CoursesData
+            'CoursesData'=>$CoursesData,
+            'ProjectData'=>$ProjectData,
+            'ReviewData'=>$ReviewData,
         ]);
+    }
+
+    function ContactSend(Request $request){
+        $contact_name=$request->input('contact_name');
+        $contact_mobile= $request->input('contact_mobile');
+        $contact_email=$request->input('contact_email');
+        $contact_msg=$request->input('contact_msg');
+        $result= ContactModel::insert([
+            'contact_name'=> $contact_name,
+            'contact_mobile'=> $contact_mobile,
+            'contact_email'=>$contact_email,
+            'contact_msg'=>$contact_msg
+        ]);
+
+        if($result==true){
+
+            return 1;
+        }
+        else{
+
+            return 0;
+        }
+
     }
 }
