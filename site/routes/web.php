@@ -2,7 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PolicyController;
+use App\Http\Controllers\TermsController;
 
 /*
 |--------------------------------------------------------------------------

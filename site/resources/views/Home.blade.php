@@ -11,4 +11,8 @@
 
 @include('Component.HomeContact')
 
+@include('Component.HomeReview')
+
+@include('layout.footer')
+
 @endsection
