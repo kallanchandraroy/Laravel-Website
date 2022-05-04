@@ -26,7 +26,8 @@ use App\Http\Controllers\TermsController;
 Route::get('/', [HomeController::class, 'HomeIndex']);
 
 Route::get('/Contact', [ContactController::class, 'ContactPage']);
-Route::get('/contactSend', [HomeController::class, 'ContactSend']);
+Route::post('/contactSend', [HomeController::class, 'ContactSend']);
+
 Route::get('/Courses', [CoursesController::class, 'CoursePage']);
 Route::get('/Projects', [ProjectsController::class, 'ProjectPage']);
 Route::get('/Policy', [PolicyController::class, 'PolicyPage']);

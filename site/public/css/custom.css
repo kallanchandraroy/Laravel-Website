@@ -162,7 +162,7 @@
 }
 
 .parallax {
-    background-image: url("../images/banner.jpg");
+    background-image: url("http://localhost/laravel/images/banner.jpg");
     min-height: 400px;
     background-attachment: fixed;
     background-position: center;
@@ -222,7 +222,7 @@
 .help-line-title{
     margin-top: 90px;
     font-family: 'Hind Siliguri', sans-serif;
-    color: red !important;
+    color: white !important;
     font-size: 32px !important;
     font-weight: 800 ;
 }
